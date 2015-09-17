@@ -46,7 +46,32 @@ define( function( require, exports, module ) {
     SelectPickerUngaCollapse.prototype.constructor = SelectPickerUngaCollapse;
 
     SelectPickerUngaCollapse.prototype._init = function() {
-        var $el = $( this.element );
+        var $labelEl = $( this.element ).siblings( '.option-label.active' );
+        var labels = $labelEl.html().split( /\|/ ).map( function( label ) {
+            return label.trim();
+        } );
+
+        this.$collapseButton = $( '<button class="btn-collapse btn-icon-only"><i class="icon"> </i></button>' );
+        this.$collapsible = $( '<span class="sub-option-label collapsible">' + labels[ 1 ] + '</span>' );
+
+        $labelEl.html( labels[ 0 ] )
+            .after( this.$collapsible )
+            .after( this.$collapseButton );
+
+        this._setButtonHandler();
+    };
+
+    SelectPickerUngaCollapse.prototype._renderLabels = function() {
+        // reserved in case translations need to be supported..
+    };
+
+    SelectPickerUngaCollapse.prototype._setButtonHandler = function() {
+        var that = this;
+
+        this.$collapseButton.on( 'click', function() {
+            var open = that.$collapseButton.hasClass( 'open' );
+            that.$collapseButton.toggleClass( 'open', !open );
+        } );
     };
 
     SelectPickerUngaCollapse.prototype.destroy = function( element ) {};

@@ -1,3 +1,19 @@
 .or-appearance-unga-collapse {
     background: yellow;
+    .btn-collapse {
+        .icon {
+            @extend .icon-chevron-right;
+        }
+        + .collapsible {
+            display: none;
+        }
+        &.open {
+            .icon {
+                @extend .icon-chevron-down;
+            }
+            + .collapsible {
+                display: block;
+            }
+        }
+    }
 }
