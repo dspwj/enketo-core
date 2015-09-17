@@ -43,7 +43,7 @@
     },
     "browser": {
         "text!enketo-config": "./config.json",
-        "widgets": "./src/js/widgets.js"
+        "widgets": "./src/js/widgets-unga.js"
     },
     "dependencies": {
         "bootstrap-datepicker": "1.4.x",
