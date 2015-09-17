@@ -1,13 +1,48 @@
 .simple-select.or-appearance-unga {
-    // background: pink;
     .option-wrapper {
-    	justify-content:center;
+    	display: block; 
     }
     .option-wrapper > label {
-    	min-width: 175px;
+    	width:20%;
+    	border:2px solid #6BA6DB;
+    	display: inline-block;
     	flex:0;
+    	font-size: 32px;
+    	border-top-left-radius: 25px;
+    	border-bottom-left-radius: 25px;
+    	&:first-child {
+    		margin-left: 30%;
+    	}
     	&.filler {
     		display: none;
     	}
+    	span.option-label {
+    			padding:12px;
+    			padding-left: 50px;
+    			position: relative;
+			}
+
+			input[type=radio] ~ .option-label::before {
+					width:45px !important;
+					height:45px !important;
+					border-radius:23px;
+					position:absolute;
+					left: 0px;
+					top: 0px;
+					content:' ' !important; 
+					transition:all 0.5s;
+					z-index: 10;
+			}
+
+      input[type=radio]:not(:checked) ~ .option-label::before {
+					border:2px solid #6BA6DB !important;
+					background:transparent  !important;
+      }
+
+      input[type=radio]:checked ~ .option-label::before { 
+					border:2px solid #6BA6DB  !important;
+					background:#6BA6DB  !important;
+      }
+
     }
 }
