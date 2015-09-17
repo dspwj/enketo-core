@@ -1,5 +1,6 @@
 @import "widgets";
 @import "../formhub/form-controls";
+@import "../../../node_modules/font-awesome/scss/font-awesome.scss";
 @import "../grid/main";
 
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700&subset=latin,latin-ext);
@@ -28,6 +29,12 @@ body {
 .form-header {
 	position: static;
 	height: 592px;
+	color: white;
+	text-transform: uppercase;
+	.form-language-selector {
+		float: none;
+		margin:0px;
+	}
 }
 
 .main .paper > form {
@@ -39,6 +46,13 @@ body {
 .question {
 	font-family: 'Oswald', Arial, sans-serif;
 	padding-bottom: 60px;
+	&:not(.note):not(.focus):hover {
+		background-color: transparent;
+	}
+}
+
+.option-wrapper > label {
+	font-family: 'Oswald', Arial, sans-serif;
 }
 
 .question .question-label, 
