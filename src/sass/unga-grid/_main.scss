@@ -1,75 +1,72 @@
 @import "widgets";
 @import "../formhub/form-controls";
-@import "../../../node_modules/font-awesome/scss/font-awesome.scss";
 @import "../grid/main";
-
-@import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700&subset=latin,latin-ext);
 
 // override ../grid/main here
 
 body {
-	padding:0px;
-	margin:0px;
+    padding: 0px;
+    margin: 0px;
 	background: url('../../../build/images/head.jpg') repeat-x center top;
-	font-family: 'Oswald', Arial, sans-serif;
+    font-family: 'Oswald', Arial, sans-serif;
 }
 
 
 .main {
-	padding-top:0px;
+    padding-top: 0px;
 }
 
 .main .paper {
-	box-shadow: none;
-	border:none;
-	padding:0px;
-	background-color: transparent;
+    box-shadow: none;
+    border: none;
+    padding: 0px;
+    background-color: transparent;
 }
 
 .form-header {
-	position: static;
-	height: 592px;
-	color: white;
-	text-transform: uppercase;
-	.form-language-selector {
-		float: none;
-		margin:0px;
-	}
+    position: static;
+    height: 592px;
+    color: white;
+    text-transform: uppercase;
+    .form-language-selector {
+        float: none;
+        margin: 0px;
+    }
 }
 
 .main .paper > form {
-	max-width: 960px;
-	padding:30px;
-	margin:0 auto;
+    max-width: 960px;
+    padding: 30px;
+    margin: 0 auto;
 }
 
 .question {
-	font-family: 'Oswald', Arial, sans-serif;
-	padding-bottom: 60px;
-	&:not(.note):not(.focus):hover {
-		background-color: transparent;
-	}
+    font-family: 'Oswald', Arial, sans-serif;
+    padding-bottom: 60px;
+    &:not(.note):not(.focus):hover {
+        background-color: transparent;
+    }
 }
 
 .option-wrapper > label {
-	font-family: 'Oswald', Arial, sans-serif;
+    font-family: 'Oswald', Arial, sans-serif;
 }
 
-.question .question-label, 
+.question .question-label,
 .note .question-label {
-	text-transform: none;
-	text-align: center;
-	font-size: 25px;
-	font-weight: 300;
+    text-transform: none;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 300;
 }
 
 legend {
-	text-align: center;
-	width:80%;
-	margin:0 auto;
-	margin-bottom:20px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 span.required {
-	display: none;
+    display: none;
 }
