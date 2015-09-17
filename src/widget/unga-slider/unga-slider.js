@@ -23,9 +23,9 @@ define( function( require, exports, module ) {
     'use strict';
     var Widget = require( '../../js/Widget' );
     var $ = require( 'jquery' );
-    require( '../../js/plugins' );
-
     var pluginName = 'ungaSlider';
+
+    require( 'bootstrap-slider-basic' );
 
     /**
      * @constructor
@@ -46,7 +46,43 @@ define( function( require, exports, module ) {
     UngaSlider.prototype.constructor = UngaSlider;
 
     UngaSlider.prototype._init = function() {
-        var $el = $( this.element );
+        var value = Number( this.element.value ) || -1;
+
+        $( this.element ).slider( {
+            reversed: false,
+            min: 1,
+            max: 7,
+            orientation: 'horizontal',
+            step: 1,
+            value: value
+        } );
+        this.$widget = $( this.element ).next( '.widget' );
+        this.$slider = this.$widget.find( '.slider' );
+        this._renderSmileys();
+        this._renderValueBubble();
+        this._setChangeHandler();
+    };
+
+    UngaSlider.prototype._renderSmileys = function() {
+        this.$widget.prepend( '<div class="sad">:(</div>' );
+        this.$widget.append( '<div class="happy">:)</div>' );
+    };
+
+    UngaSlider.prototype._renderValueBubble = function() {
+        this.$showValue = $( '<div class="show-value">' + this.element.value + '</div>' ).insertBefore( this.element );
+    };
+
+    UngaSlider.prototype._updateCurrentValueShown = function() {
+        this.$showValue.text( this.element.value );
+    };
+
+    UngaSlider.prototype._setChangeHandler = function() {
+        var that = this;
+
+        $( this.element ).on( 'slideStop.' + this.namespace, function( slideEvt ) {
+            $( this ).trigger( 'change' );
+            that._updateCurrentValueShown();
+        } );
     };
 
     UngaSlider.prototype.destroy = function( element ) {};
