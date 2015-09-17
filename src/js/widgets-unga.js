@@ -11,6 +11,7 @@ define( function( require, exports, module ) {
         require( '../widget/select-unga-collapse/select-unga-collapse' ),
         require( '../widget/select-unga-placeholder/select-unga-placeholder' ),
         require( '../widget/unga-slider/unga-slider' ),
+        require( '../widget/unga-placeholder/unga-placeholder' ),
     ];
 
     module.exports = widgets;

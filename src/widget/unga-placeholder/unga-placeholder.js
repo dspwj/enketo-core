@@ -25,31 +25,31 @@ define( function( require, exports, module ) {
     var $ = require( 'jquery' );
     require( '../../js/plugins' );
 
-    var pluginName = 'selectPickerUnga';
+    var pluginName = 'ungaPlaceholder';
 
-    /**
+    /*
      * @constructor
      * @param {Element} element [description]
      * @param {(boolean|{touch: boolean, repeat: boolean})} options options
      * @param {*=} e     event
      */
-    function SelectPickerUnga( element, options ) {
+    function UngaPlaceholder( element, options ) {
         this.namespace = pluginName;
         Widget.call( this, element, options );
         this._init();
     }
 
     //copy the prototype functions from the Widget super class
-    SelectPickerUnga.prototype = Object.create( Widget.prototype );
+    UngaPlaceholder.prototype = Object.create( Widget.prototype );
 
     //ensure the constructor is the new one
-    SelectPickerUnga.prototype.constructor = SelectPickerUnga;
+    UngaPlaceholder.prototype.constructor = UngaPlaceholder;
 
-    SelectPickerUnga.prototype._init = function() {
+    UngaPlaceholder.prototype._init = function() {
         var $el = $( this.element );
     };
 
-    SelectPickerUnga.prototype.destroy = function( element ) {};
+    UngaPlaceholder.prototype.destroy = function( element ) {};
 
     $.fn[ pluginName ] = function( options, event ) {
         return this.each( function() {
@@ -59,7 +59,7 @@ define( function( require, exports, module ) {
             options = options || {};
 
             if ( !data && typeof options === 'object' ) {
-                $this.data( pluginName, ( data = new SelectPickerUnga( this, options, event ) ) );
+                $this.data( pluginName, ( data = new UngaPlaceholder( this, options, event ) ) );
             } else if ( data && typeof options === 'string' ) {
                 data[ options ]( this );
             }
@@ -68,6 +68,6 @@ define( function( require, exports, module ) {
 
     module.exports = {
         'name': pluginName,
-        'selector': '.or-appearance-unga input[type="radio"]'
+        'selector': '.or-appearance-unga-placeholder input[type="text"]'
     };
 } );

@@ -47,8 +47,6 @@ define( function( require, exports, module ) {
 
     SelectPickerUngaCollapse.prototype._init = function() {
         var $el = $( this.element );
-
-        $el.after( '<div>' + pluginName + '!!</div>' );
     };
 
     SelectPickerUngaCollapse.prototype.destroy = function( element ) {};

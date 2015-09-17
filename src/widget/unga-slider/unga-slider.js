@@ -47,8 +47,6 @@ define( function( require, exports, module ) {
 
     UngaSlider.prototype._init = function() {
         var $el = $( this.element );
-
-        $el.after( '<div>' + pluginName + '!!</div>' );
     };
 
     UngaSlider.prototype.destroy = function( element ) {};
