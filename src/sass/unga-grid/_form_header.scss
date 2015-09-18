@@ -1,0 +1,90 @@
+// General and header styles
+
+body {
+    padding: 0px;
+    margin: 0px;
+	background: url('/images/head.jpg') repeat-x center top;
+    font-family: 'Oswald', Arial, sans-serif;
+}
+
+
+.main {
+    padding-top: 0px;
+}
+
+.main .paper {
+    box-shadow: none;
+    border: none;
+    padding: 0px;
+    background-color: transparent;
+}
+
+.form-header {
+    position: static;
+    height: 592px;
+    color: white;
+    text-transform: uppercase;
+    .form-language-selector {
+        float: none;
+        margin: 0px;
+    }
+}
+
+.main .paper > form {
+    max-width: 960px;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+h3#form-title {
+    position: absolute;
+    left: 50%;
+    top: -240px;
+    background-color: transparent;
+    width: 455px;
+    margin-left: -236px;
+    color: white;
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 48px;
+    padding:25px;
+    border:3px solid #FFF;
+    text-align: center;
+    &:before {
+        content: '';
+        width:2px;
+        height:75px;
+        position: absolute;
+        top:-75px;
+        background-color: #FFF;
+        left: 50%;
+    }
+    &:after {
+        content: '';
+        width:2px;
+        height:120px;
+        position: absolute;
+        background-color: #FFF;
+        left: 50%;
+        top:100%;
+    }
+}
+
+.btn-scroll-to-first {
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    width:32px;
+    height:32px;
+    margin-left: -22px;
+    background-color: #93BFE6;
+    border-radius: 16px;
+    color: white;
+    border:2px solid white;
+    opacity: 1;
+    transition:all 0.5s;
+    &:hover {
+        opacity: 1;
+        color: white;
+        background-color: darken(#93BFE6, 10%);
+    }
+}

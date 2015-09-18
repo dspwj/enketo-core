@@ -1,44 +1,10 @@
 @import "widgets";
 @import "../formhub/form-controls";
 @import "../grid/main";
+@import "form_header";
+@import "form_footer";
 
 // override ../grid/main here
-
-body {
-    padding: 0px;
-    margin: 0px;
-	background: url('../../../build/images/head.jpg') repeat-x center top;
-    font-family: 'Oswald', Arial, sans-serif;
-}
-
-
-.main {
-    padding-top: 0px;
-}
-
-.main .paper {
-    box-shadow: none;
-    border: none;
-    padding: 0px;
-    background-color: transparent;
-}
-
-.form-header {
-    position: static;
-    height: 592px;
-    color: white;
-    text-transform: uppercase;
-    .form-language-selector {
-        float: none;
-        margin: 0px;
-    }
-}
-
-.main .paper > form {
-    max-width: 960px;
-    padding: 30px;
-    margin: 0 auto;
-}
 
 .question {
     font-family: 'Oswald', Arial, sans-serif;
@@ -69,4 +35,23 @@ legend {
 
 span.required {
     display: none;
+}
+
+.note {
+    font-family: 'Oswald', Arial, sans-serif;
+    background: transparent;
+    border: none;
+}
+
+h2 {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-weight: 600;
+    padding-top: 30px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+section.or-appearance-narrow {
+    max-width: 500px;
+    margin:0 auto;
 }

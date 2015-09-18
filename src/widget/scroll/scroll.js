@@ -44,7 +44,7 @@ define( function( require, exports, module ) {
     Scroll.prototype._init = function() {
 
         this.$scrollButton = $( '<button class="btn btn-icon-only btn-scroll-to-first">' +
-            '<i class="icon icon-chevron-down"> <i></button>' );
+            '<i class="fa fa-chevron-down"></i></button>' );
 
         $( this.element )
             .find( '#form-title' )

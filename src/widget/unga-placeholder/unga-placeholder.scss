@@ -1,4 +1,14 @@
-.or-appearance-unga-placeholder {
-    // needs to look similar to unga-placeholder-minimal
-    background: purple;
+// needs to look similar to unga-placeholder-minimal
+.question.or-appearance-unga-placeholder {
+    background-color: #F3F3F3;
+    border:1px solid #CCC;
+    padding-bottom: 0px;
+    margin:6px;
+    .question-label {
+    	font-size: 18px;
+    	text-align: left;
+    }
+    &:hover {
+    	background-color: #F3F3F3 !important;
+    }
 }

@@ -64,8 +64,8 @@ define( function( require, exports, module ) {
     };
 
     UngaSlider.prototype._renderSmileys = function() {
-        this.$widget.prepend( '<div class="sad">:(</div>' );
-        this.$widget.append( '<div class="happy">:)</div>' );
+        this.$widget.append( '<div class="sad"><i class="fa fa-fw fa-frown-o"></i></div>' );
+        this.$widget.append( '<div class="happy"><i class="fa fa-fw fa-smile-o"></i></div>' );
     };
 
     UngaSlider.prototype._renderValueBubble = function() {
