@@ -55,3 +55,20 @@ section.or-appearance-narrow {
     max-width: 500px;
     margin:0 auto;
 }
+
+.btn-primary {
+    background-color: #68A5DE;
+    border:none;
+    border-bottom: 2px solid darken(#68A5DE, 10%);
+    border-radius: 4px;
+    font-size: 20px;
+    text-transform: uppercase; 
+    padding-top:10px;
+    padding-bottom: 10px;
+    transition:all 0.5s;
+    &:hover, &:focus, &:active, &.active {
+        background-color: darken(#68A5DE, 10%);
+        border:none;
+        border-bottom: 2px solid darken(#68A5DE, 20%);
+    }
+}

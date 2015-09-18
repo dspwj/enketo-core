@@ -47,6 +47,9 @@ define( function( require, exports, module ) {
 
     SelectPickerUngaPlaceholder.prototype._init = function() {
         var $el = $( this.element );
+        // set label as placeholder from .question label
+        var $label = $el.siblings('.question-label').text();
+        $el.find('option:first-child').html($label);
     };
 
     SelectPickerUngaPlaceholder.prototype.destroy = function( element ) {};

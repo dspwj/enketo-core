@@ -47,6 +47,9 @@ define( function( require, exports, module ) {
 
     UngaPlaceholder.prototype._init = function() {
         var $el = $( this.element );
+        // set label as placeholder from .question label
+        var $prev = $el.prev('.question-label');
+        $el.attr('placeholder', $prev.text());
     };
 
     UngaPlaceholder.prototype.destroy = function( element ) {};
