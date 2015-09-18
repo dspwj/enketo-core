@@ -5,7 +5,7 @@
     padding-left: 185px;
     position: relative;
     max-width:50%;
-    height:200px;
+    height:170px;
     align-content:center;
     overflow: hidden;
     &:hover {
@@ -32,7 +32,8 @@
       left: 0px;
       top: 0px;
       margin:0px;
-      height:350px;
+      height:170px;
+      border:2px solid green;
 
     }
     .widget.slider-horizontal {
