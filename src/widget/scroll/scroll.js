@@ -43,18 +43,18 @@ define( function( require, exports, module ) {
 
     Scroll.prototype._init = function() {
 
+        this.$formTitle = $( this.element ).find( '#form-title' );
         this.$scrollButton = $( '<button class="btn btn-icon-only btn-scroll-to-first">' +
             '<i class="fa fa-chevron-down"></i></button>' );
 
-        $( this.element )
-            .find( '#form-title' )
+        this.$formTitle
             .after( this.$scrollButton );
 
         this._setScrollHandler();
     };
 
     Scroll.prototype._setScrollHandler = function() {
-        this.$scrollButton.on( 'click', function() {
+        this.$scrollButton.add( this.$formTitle ).on( 'click', function() {
             if ( window.scrollTo ) {
                 var firstTop = $( '.question' ).eq( 0 ).offset().top;
                 window.scrollTo( 0, firstTop - 20 );
