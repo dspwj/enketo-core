@@ -55,8 +55,9 @@ define( function( require, exports, module ) {
         this.$collapsible = $( '<span class="sub-option-label collapsible">' + labels[ 1 ] + '</span>' );
 
         $labelEl.html( labels[ 0 ] )
-            .after( this.$collapsible )
-            .after( this.$collapseButton );
+            .after( this.$collapsible );
+
+        $labelEl.append(this.$collapseButton);
 
         this._setButtonHandler();
     };
@@ -66,11 +67,10 @@ define( function( require, exports, module ) {
     };
 
     SelectPickerUngaCollapse.prototype._setButtonHandler = function() {
-        var that = this;
-
-        this.$collapseButton.on( 'click', function() {
-            var open = that.$collapseButton.hasClass( 'open' );
-            that.$collapseButton.toggleClass( 'open', !open );
+        var that = $(this.element).siblings( '.option-label.active' );
+        that.on( 'click', function() {
+            var open = that.hasClass( 'open' );
+            that.toggleClass( 'open', !open );
         } );
     };
 

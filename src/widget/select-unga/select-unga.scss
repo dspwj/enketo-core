@@ -1,25 +1,27 @@
-.simple-select.or-appearance-unga {
+.simple-select.or-appearance-unga, 
+.touch .question.simple-select.or-appearance-unga {
     .option-wrapper {
     	display: block; 
     }
     .option-wrapper > label {
-    	width:20%;
-    	border:2px solid #6BA6DB;
+    	width:25%;
+    	border:2px solid #6BA6DB !important;
     	display: inline-block;
     	flex:0;
     	font-size: 32px;
-    	border-top-left-radius: 25px;
-    	border-bottom-left-radius: 25px;
+    	border-top-left-radius: 25px  !important;
+    	border-bottom-left-radius: 25px  !important;
     	&:first-child {
-    		margin-left: 30%;
+    		margin-left: 25%;
     	}
     	&.filler {
     		display: none;
     	}
     	span.option-label {
     			padding:12px;
-    			padding-left: 50px;
+    			padding-left: 24px;
     			position: relative;
+                text-align: center;
 			}
 
 			input[type=radio] ~ .option-label::before {
