@@ -14,14 +14,14 @@
     select {
     	font-family: 'Oswald', Arial, sans-serif;
     	font-size: 18px;
-    	opacity: 0.5;
+        color: #444;
     }
     &:before {
         position: absolute;
         left: 8px;
-        bottom: 10px;
-        width: 20px;
-        height: 20px;
+        bottom: 16px;
+        width: 22px;
+        height: 24px;
         background-size: contain;
         background-position: center center;
         background-repeat: no-repeat;
@@ -30,20 +30,32 @@
     }
 
     &:nth-child(1):before {
-        background-image: url('/images/icon-gender.svg');
+        background-image: url('/images/icon-gender.png');
     }
     &:nth-child(2):before {
-        background-image: url('/images/icon-age.svg');
+        background-image: url('/images/icon-age.png');
     }
     &:nth-child(3):before {
-        background-image: url('/images/icon-education.svg');
+        background-image: url('/images/icon-education.png');
     }
     &:nth-child(4):before {
-        background-image: url('/images/icon-country.svg');
+        background-image: url('/images/icon-country.png');
     }
 
     // possibly temporary
     img {
+        position: absolute;
+        left: 8px;
+        bottom: 16px;
+        width: 22px;
+        height: auto;
+        margin:0px;
+        z-index: 2;
         display: none;
     }
+}
+
+.touch .question.or-appearance-unga-placeholder-minimal {
+    padding-left: 40px;
+    line-height: 32px;
 }
