@@ -2,6 +2,7 @@
 .touch .question.simple-select.or-appearance-unga {
     .option-wrapper {
     	display: block; 
+        text-align: center;
     }
     .option-wrapper > label {
     	width:25%;
@@ -11,9 +12,6 @@
     	font-size: 32px;
     	border-top-left-radius: 25px  !important;
     	border-bottom-left-radius: 25px  !important;
-    	&:first-child {
-    		margin-left: 25%;
-    	}
     	&.filler {
     		display: none;
     	}
@@ -46,5 +44,14 @@
 					background:#6BA6DB  !important;
       }
 
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .simple-select.or-appearance-unga, 
+    .touch .question.simple-select.or-appearance-unga {
+        .option-wrapper > label {
+            width:35%;
+        }
     }
 }
