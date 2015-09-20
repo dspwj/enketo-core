@@ -1,29 +1,28 @@
 // needs to look similar to unga-placeholder-minimal
 .question.or-appearance-unga-placeholder {
     background-color: #F3F3F3;
-    border:1px solid #CCC;
+    border: 1px solid #CCC;
     padding-bottom: 0px;
-    margin:6px;
+    margin: 6px;
     padding-left: 32px;
     position: relative;
     .question-label {
         display: none;
     }
     &:hover {
-    	background-color: #F3F3F3 !important;
+        background-color: #F3F3F3 !important;
     }
-
     input {
         font-family: 'Oswald', Arial, sans-serif;
         font-size: 18px;
-        margin-left:8px;
+        margin-left: 8px;
         color: #444;
         &::-webkit-input-placeholder {
-            opacity: 1 !important; 
+            opacity: 1 !important;
             color: #444;
         }
     }
-    &:before {
+    /*&:before {
         position: absolute;
         left: 8px;
         bottom: 16px;
@@ -35,7 +34,7 @@
         content:' ';
         opacity: 0.4;
         background-image: url('/images/icon-city.png');
-    }
+    }*/
     // possibly temporary
     img {
         position: absolute;
@@ -45,8 +44,8 @@
         height: auto;
         z-index: 2;
         opacity: 0.4;
-        margin:0px;
-        display: none;
+        margin: 0px;
+        //display: none;
+   
     }
-
 }

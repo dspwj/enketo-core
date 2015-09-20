@@ -1,22 +1,22 @@
 .question.or-appearance-unga-placeholder-minimal {
     background-color: #F3F3F3;
-    border:1px solid #CCC;
+    border: 1px solid #CCC;
     padding-bottom: 2px;
-    margin:6px;
+    margin: 6px;
     padding-left: 32px;
     position: relative;
     .question-label {
-    	display: none;
+        display: none;
     }
     &:hover {
-    	background-color: #F3F3F3 !important;
+        background-color: #F3F3F3 !important;
     }
     select {
-    	font-family: 'Oswald', Arial, sans-serif;
-    	font-size: 18px;
+        font-family: 'Oswald', Arial, sans-serif;
+        font-size: 18px;
         color: #444;
     }
-    &:before {
+    /*&:before {
         position: absolute;
         left: 8px;
         bottom: 16px;
@@ -40,8 +40,7 @@
     }
     &:nth-child(4):before {
         background-image: url('/images/icon-country.png');
-    }
-
+    }*/
     // possibly temporary
     img {
         position: absolute;
@@ -49,9 +48,10 @@
         bottom: 16px;
         width: 22px;
         height: auto;
-        margin:0px;
+        margin: 0px;
         z-index: 2;
-        display: none;
+        //display: none;
+   
     }
 }
 
