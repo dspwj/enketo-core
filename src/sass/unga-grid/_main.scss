@@ -73,3 +73,15 @@ section.or-appearance-narrow {
         border-bottom: 2px solid darken(#68A5DE, 20%);
     }
 }
+
+// Error messages
+
+.invalid-constraint .or-constraint-msg.active, 
+.invalid-required .or-required-msg.active {
+    font-family: 'Oswald', Arial, sans-serif;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    font-size: 18px;
+    font-weight: normal;    
+}
