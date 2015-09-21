@@ -14,9 +14,9 @@
     }
 }
 
-.option-wrapper > label, 
-button.btn, 
-h2, h3, h4, p, 
+.option-wrapper > label,
+button.btn,
+h2, h3, h4, p,
 .vex.vex-theme-plain .vex-content {
     font-family: 'Oswald', Arial, sans-serif;
 }
@@ -57,46 +57,51 @@ h2 {
 
 section.or-appearance-narrow {
     max-width: 500px;
-    margin:0 auto;
+    margin: 0 auto;
 }
 
 .btn-primary {
     background-color: #68A5DE;
-    border:none;
-    border-bottom: 2px solid darken(#68A5DE, 10%);
+    border: none;
+    border-bottom: 2px solid darken(#68a5de, 10%);
     border-radius: 4px;
     font-size: 20px;
-    text-transform: uppercase; 
-    padding-top:10px;
+    text-transform: uppercase;
+    padding-top: 10px;
     padding-bottom: 10px;
-    transition:all 0.5s;
+    transition: all 0.5s;
     &:hover, &:focus, &:active, &.active {
-        background-color: darken(#68A5DE, 10%);
-        border:none;
-        border-bottom: 2px solid darken(#68A5DE, 20%);
+        background-color: darken(#68a5de, 10%);
+        border: none;
+        border-bottom: 2px solid darken(#68a5de, 20%);
     }
 }
 
 // Error messages
 
-.invalid-constraint .or-constraint-msg.active, 
+.invalid-required, .invalid-constraint {
+    &:not(.note):not(.focus):hover {
+        background: $state-danger-bg;
+    }
+}
+
+.invalid-constraint .or-constraint-msg.active,
 .invalid-required .or-required-msg.active {
     font-family: 'Oswald', Arial, sans-serif;
     text-align: center;
-    font-weight: normal;    
+    font-weight: normal;
 }
 
-.invalid-constraint:not(.or-appearance-unga-placeholder):not(.or-appearance-unga-placeholder-minimal) .or-constraint-msg.active, 
+.invalid-constraint:not(.or-appearance-unga-placeholder):not(.or-appearance-unga-placeholder-minimal) .or-constraint-msg.active,
 .invalid-required:not(.or-appearance-unga-placeholder):not(.or-appearance-unga-placeholder-minimal) .or-required-msg.active {
     padding-top: 30px;
     padding-bottom: 15px;
     font-size: 18px;
 }
 
-.question.invalid-constraint:not(.or-appearance-unga-placeholder):not(.or-appearance-unga-placeholder-minimal), 
-.question.invalid-required:not(.or-appearance-unga-placeholder):not(.or-appearance-unga-placeholder-minimal), 
-.note.invalid-constraint:not(.or-appearance-unga-placeholder):not(.or-appearance-unga-placeholder-minimal), 
+.question.invalid-constraint:not(.or-appearance-unga-placeholder):not(.or-appearance-unga-placeholder-minimal),
+.question.invalid-required:not(.or-appearance-unga-placeholder):not(.or-appearance-unga-placeholder-minimal),
+.note.invalid-constraint:not(.or-appearance-unga-placeholder):not(.or-appearance-unga-placeholder-minimal),
 .note.invalid-required:not(.or-appearance-unga-placeholder):not(.or-appearance-unga-placeholder-minimal) {
     margin-bottom: 20px;
 }
-
