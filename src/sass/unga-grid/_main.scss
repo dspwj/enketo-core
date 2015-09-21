@@ -80,15 +80,20 @@ section.or-appearance-narrow {
 .invalid-required .or-required-msg.active {
     font-family: 'Oswald', Arial, sans-serif;
     text-align: center;
-    padding-top: 30px;
-    padding-bottom: 15px;
-    font-size: 18px;
     font-weight: normal;    
 }
 
-.question.invalid-constraint, 
-.question.invalid-required, 
-.note.invalid-constraint, 
-.note.invalid-required {
+.invalid-constraint:not(.or-appearance-unga-placeholder):not(.or-appearance-unga-placeholder-minimal) .or-constraint-msg.active, 
+.invalid-required:not(.or-appearance-unga-placeholder):not(.or-appearance-unga-placeholder-minimal) .or-required-msg.active {
+    padding-top: 30px;
+    padding-bottom: 15px;
+    font-size: 18px;
+}
+
+.question.invalid-constraint:not(.or-appearance-unga-placeholder):not(.or-appearance-unga-placeholder-minimal), 
+.question.invalid-required:not(.or-appearance-unga-placeholder):not(.or-appearance-unga-placeholder-minimal), 
+.note.invalid-constraint:not(.or-appearance-unga-placeholder):not(.or-appearance-unga-placeholder-minimal), 
+.note.invalid-required:not(.or-appearance-unga-placeholder):not(.or-appearance-unga-placeholder-minimal) {
     margin-bottom: 20px;
 }
+
