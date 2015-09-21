@@ -67,11 +67,11 @@ define( function( require, exports, module ) {
     };
 
     SelectPickerUngaCollapse.prototype._setButtonHandler = function() {
-        var that = $( this.element ).siblings( '.option-label.active' );
-        that.on( 'click', function() {
-            var open = that.hasClass( 'open' );
-            that.toggleClass( 'open', !open );
-            return false;
+        this.$collapseButton.on( 'click', function() {
+            var $label = $( this ).parent( '.option-label' );
+            var open = $label.hasClass( 'open' );
+            $label.toggleClass( 'open', !open );
+            return true;
         } );
     };
 
