@@ -38,6 +38,14 @@
     }
 }
 
+.touch {
+    .question.or-appearance-unga-placeholder-minimal {
+        select {
+            margin: 0 0 0 8px;
+        }
+    }
+}
+
 .invalid-constraint.or-appearance-unga-placeholder-minimal,
 .invalid-required.or-appearance-unga-placeholder-minimal {
     background-color: #f2dede;
