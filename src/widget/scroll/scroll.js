@@ -44,7 +44,7 @@ define( function( require, exports, module ) {
     Scroll.prototype._init = function() {
 
         this.$formTitle = $( this.element ).find( '#form-title' );
-        this.$scrollButton = $( '<button class="btn btn-icon-only btn-scroll-to-first">' +
+        this.$scrollButton = $( '<button type="button" class="btn btn-icon-only btn-scroll-to-first">' +
             '<i class="fa fa-chevron-down"></i></button>' );
 
         this.$formTitle
@@ -59,6 +59,7 @@ define( function( require, exports, module ) {
                 var firstTop = $( '.question' ).eq( 0 ).offset().top;
                 window.scrollTo( 0, firstTop - 20 );
             }
+            return false;
         } );
     };
 
