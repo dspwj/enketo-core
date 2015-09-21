@@ -85,3 +85,10 @@ section.or-appearance-narrow {
     font-size: 18px;
     font-weight: normal;    
 }
+
+.question.invalid-constraint, 
+.question.invalid-required, 
+.note.invalid-constraint, 
+.note.invalid-required {
+    margin-bottom: 20px;
+}
