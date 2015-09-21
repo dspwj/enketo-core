@@ -40,10 +40,11 @@
             img {
                 float: none;
                 width: 110px;
-                height:110px;
+                height:251px;
+                // note: image dimensions must maintain image proportions
                 position: absolute;
-                top: 2px;
-                left: 2px;
+                top: 0px;
+                left: 0px;
                 z-index: 10;
                 // background-color: rgba(0,0,0,0.5);
                 margin:0px;
@@ -65,89 +66,7 @@
             input[type=checkbox]:checked ~ .option-label::before { 
                 color:#585858;
             }
-            // &:before {
-            //     content:' ';
-            //     position:absolute;
-            //     width:110px;
-            //     background:#999;
-            //     left: 2px;
-            //     top:2px;
-            //     z-index:10;
-            //     height: 100%;
-            //     display: block;
-            //     background-size: 100px auto;
-            //     background-repeat: no-repeat;
-            //     background-position: top center;
-            // }
 
-            // &:nth-child(1):before {
-            //     background-color: #E5233D;
-            //     background-image: url('../../../../build/images/icons/1.jpg');
-            // }
-            // &:nth-child(2):before {
-            //     background-color: #DDA73A;
-            //     background-image: url('../../../../build/images/icons/2.jpg');
-            // }
-            // &:nth-child(3):before {
-            //     background-color: #4CA146;
-            //     background-image: url('../../../../build/images/icons/3.jpg');
-            // }
-            // &:nth-child(4):before {
-            //     background-color: #C52434;
-            //     background-image: url('../../../../build/images/icons/4.jpg');
-            // }
-            // &:nth-child(5):before {
-            //     background-color: #EB4235;
-            //     background-image: url('../../../../build/images/icons/5.jpg');
-            // }
-            // &:nth-child(6):before {
-            //     background-color: #35BFE4;
-            //     background-image: url('../../../../build/images/icons/6.jpg');
-            // }
-            // &:nth-child(7):before {
-            //     background-color: #FAC332;
-            //     background-image: url('../../../../build/images/icons/7.jpg');
-            // }
-            // &:nth-child(8):before {
-            //     background-color: #A12045;
-            //     background-image: url('../../../../build/images/icons/8.jpg');
-            // }
-            // &:nth-child(9):before {
-            //     background-color: #F06A38;
-            //     background-image: url('../../../../build/images/icons/9.jpg');
-            // }
-            // &:nth-child(10):before {
-            //     background-color: #DC1F69;
-            //     background-image: url('../../../../build/images/icons/10.jpg');
-            // }
-            // &:nth-child(11):before {
-            //     background-color: #F69C3A;
-            //     background-image: url('../../../../build/images/icons/11.jpg');
-            // }
-            // &:nth-child(12):before {
-            //     background-color: #BE8C36;
-            //     background-image: url('../../../../build/images/icons/12.jpg');
-            // }
-            // &:nth-child(13):before {
-            //     background-color: #427E48;
-            //     background-image: url('../../../../build/images/icons/13.jpg');
-            // }
-            // &:nth-child(14):before {
-            //     background-color: #2998D2;
-            //     background-image: url('../../../../build/images/icons/14.jpg');
-            // }
-            // &:nth-child(15):before {
-            //     background-color: #5DB84E;
-            //     background-image: url('../../../../build/images/icons/15.jpg');
-            // }
-            // &:nth-child(16):before {
-            //     background-color: #1B6B9D;
-            //     background-image: url('../../../../build/images/icons/16.jpg');
-            // }
-            // &:nth-child(17):before {
-            //     background-color: #174A6A;
-            //     background-image: url('../../../../build/images/icons/17.jpg');
-            // }
         }
 
         .option-label {
@@ -165,6 +84,23 @@
         .sub-option-label {
             padding:10px 0px;
             font-size: 17px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .question.or-appearance-unga-collapse .option-wrapper, 
+    .touch .question.or-appearance-unga-collapse .option-wrapper {
+        label {
+            padding-left: 130px !important;
+            padding-right: 70px !important;            
+        }
+        .option-label {
+            font-size: 20px;
+        }
+        input[type=checkbox] ~ .option-label::before {
+            right: 0px;
         }
     }
 }

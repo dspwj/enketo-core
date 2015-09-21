@@ -2,7 +2,7 @@
 .question.or-appearance-unga-placeholder {
     background-color: #F3F3F3;
     border: 1px solid #CCC;
-    padding-bottom: 0px;
+    padding-bottom: 2px;
     margin: 6px;
     padding-left: 32px;
     position: relative;
@@ -22,30 +22,13 @@
             color: #444;
         }
     }
-    /*&:before {
-        position: absolute;
-        left: 8px;
-        bottom: 16px;
-        width: 22px;
-        height: 25px;
-        background-size: contain;
-        background-position: center center;
-        background-repeat: no-repeat;
-        content:' ';
-        opacity: 0.4;
-        background-image: url('/images/icon-city.png');
-    }*/
-    // possibly temporary
     img {
         position: absolute;
         left: 8px;
-        bottom: 16px;
+        bottom: 18px;
         width: 22px;
-        height: auto;
+        height: 23px;
         z-index: 2;
-        opacity: 0.4;
         margin: 0px;
-        //display: none;
-   
     }
 }
