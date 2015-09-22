@@ -1015,7 +1015,7 @@ define( function( require, exports, module ) {
                     virgin = $branchNode.hasClass( 'pre-init' );
                 if ( virgin || selfRelevant( $branchNode ) ) {
                     branchChange = true;
-                    $branchNode.addClass( 'disabled' );
+                    $branchNode.addClass( 'disabled' ).removeClass( 'disabled' ).addClass( 'disabled' );
 
                     // if the branch was previously enabled
                     if ( !virgin ) {
