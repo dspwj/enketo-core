@@ -19,3 +19,8 @@
 		max-width: 200px;
 	}
 }
+
+// overrides weird negative margins on .form-footer which introduce horizontal scrollbar (among other things)
+.form-footer {
+	margin:0px;
+}
