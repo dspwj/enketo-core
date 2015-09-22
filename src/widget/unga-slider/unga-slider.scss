@@ -8,8 +8,8 @@
     height:170px;
     align-content:center;
     overflow: hidden;
-    &:hover {
-    	background-color: #F3F3F3 !important;
+    &:not(.note):not(.focus):hover {
+    	background-color: #F3F3F3;
     }
     .question-label {
     	text-align:left;

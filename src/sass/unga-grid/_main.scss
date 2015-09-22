@@ -80,7 +80,7 @@ section.or-appearance-narrow {
 // Error messages
 
 .invalid-required, .invalid-constraint {
-    &:not(.note):not(.focus):hover {
+    &:not(.note):not(.focus):not(.or-appearance-unga-collapse):hover {
         background: $state-danger-bg;
     }
 }
@@ -92,16 +92,16 @@ section.or-appearance-narrow {
     font-weight: normal;
 }
 
-.invalid-constraint:not(.or-appearance-unga-placeholder):not(.or-appearance-unga-placeholder-minimal) .or-constraint-msg.active,
-.invalid-required:not(.or-appearance-unga-placeholder):not(.or-appearance-unga-placeholder-minimal) .or-required-msg.active {
-    padding-top: 30px;
-    padding-bottom: 15px;
-    font-size: 18px;
-}
+// .invalid-constraint:not(.or-appearance-unga-placeholder):not(.or-appearance-unga-placeholder-minimal) .or-constraint-msg.active,
+// .invalid-required:not(.or-appearance-unga-placeholder):not(.or-appearance-unga-placeholder-minimal) .or-required-msg.active {
+//     padding-top: 30px;
+//     padding-bottom: 15px;
+//     font-size: 18px;
+// }
 
-.question.invalid-constraint:not(.or-appearance-unga-placeholder):not(.or-appearance-unga-placeholder-minimal),
-.question.invalid-required:not(.or-appearance-unga-placeholder):not(.or-appearance-unga-placeholder-minimal),
-.note.invalid-constraint:not(.or-appearance-unga-placeholder):not(.or-appearance-unga-placeholder-minimal),
-.note.invalid-required:not(.or-appearance-unga-placeholder):not(.or-appearance-unga-placeholder-minimal) {
-    margin-bottom: 20px;
-}
+// .question.invalid-constraint:not(.or-appearance-unga-placeholder):not(.or-appearance-unga-placeholder-minimal),
+// .question.invalid-required:not(.or-appearance-unga-placeholder):not(.or-appearance-unga-placeholder-minimal),
+// .note.invalid-constraint:not(.or-appearance-unga-placeholder):not(.or-appearance-unga-placeholder-minimal),
+// .note.invalid-required:not(.or-appearance-unga-placeholder):not(.or-appearance-unga-placeholder-minimal) {
+//     margin-bottom: 20px;
+// }

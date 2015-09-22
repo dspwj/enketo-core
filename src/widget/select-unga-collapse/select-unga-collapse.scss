@@ -88,6 +88,14 @@
     }
 }
 
+.invalid-required.question.or-appearance-unga-collapse, 
+.invalid-constraint.question.or-appearance-unga-collapse {
+    background: transparent !important;
+    label, label:hover {
+        background-color: #f2dede;
+        border-color: darken(#f2dede, 10%);
+    }
+}
 
 @media screen and (max-width: 767px) {
     .question.or-appearance-unga-collapse .option-wrapper, 
