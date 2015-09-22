@@ -27,10 +27,10 @@
             padding-left:140px !important;
             padding-right:90px !important;
             position:relative;
-            min-height:95px;
+            min-height:70px;
             margin-bottom:5px;
             background-color: #F3F3F3;
-            border-bottom: 2px solid #F3F3F3;
+            border-bottom: none;
             transition:all 0.5s;
             overflow: hidden;
             &:hover {
@@ -43,7 +43,7 @@
                 height:251px;
                 // note: image dimensions must maintain image proportions
                 position: absolute;
-                top: 0px;
+                top: -20px;
                 left: 0px;
                 z-index: 10;
                 // background-color: rgba(0,0,0,0.5);
@@ -97,7 +97,7 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .question.or-appearance-unga-collapse .option-wrapper, 
     .touch .question.or-appearance-unga-collapse .option-wrapper {
         label {
