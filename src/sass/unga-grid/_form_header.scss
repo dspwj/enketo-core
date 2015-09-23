@@ -43,7 +43,7 @@ h3#form-title {
     margin-left: -236px;
     color: white;
     font-family: 'Oswald', Arial, sans-serif;
-    font-size: 48px;
+    font-size: 34px;
     padding: 25px;
     border: 3px solid #FFF;
     text-align: center;
@@ -90,5 +90,24 @@ h3#form-title {
         opacity: 1;
         color: white;
         background-color: darken(#93bfe6, 10%);
+    }
+}
+
+
+@media screen and (max-width: 540px) {
+    h3#form-title {
+        width: 100%;
+        left: 0px;
+        margin: 0px;
+        font-size: 22px;
+        &:before {
+            display: none;
+        }
+        &:after {
+            display: none;
+        }
+    }
+    .form-header {
+        margin:0px;
     }
 }

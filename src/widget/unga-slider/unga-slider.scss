@@ -119,3 +119,17 @@
         min-width: 100%;
     }
 }
+
+@media screen and (max-width: 540px) {
+    .question.or-appearance-unga-slider-7 {
+        padding-left: 125px !important;
+        img {
+            width: 110px;
+            height:251px;
+            top: 0px;
+        }
+        .widget.slider-horizontal {
+            width: calc(100% - 145px);
+        }
+    }
+}
