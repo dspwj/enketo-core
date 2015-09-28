@@ -5,6 +5,9 @@ body {
     margin: 0px;
     background: url("/images/head.jpg") repeat-x center top;
     font-family: 'Oswald', Arial, sans-serif;
+    &[data-form-theme-haveyoursay-header] {
+        background-image: url("/images/haveyoursay_head.jpg");
+    }
 }
 
 .main {
