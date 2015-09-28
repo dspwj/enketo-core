@@ -64,6 +64,24 @@ define( function( require, exports, module ) {
 
             loadErrors = loadErrors.concat( form.init() );
 
+            (function($body){
+                /*
+                patch to get form themes into a document.body element's data-* attrs
+                e.g. a form with "theme-unga-grid" will be:
+                    <body data-form-theme-unga-grid="true">
+                and can be matched with selector:
+                    body[data-form-theme-unga-grid] { ... }
+                */
+                var $body = $(document.body),
+                    domClassList = form.$.get(0).classList,
+                    classArray = Array.prototype.concat.apply([], domClassList);
+                classArray.filter(function(kls){
+                    return kls.match(/theme-*/);
+                }).forEach(function(theme){
+                    $body.attr('data-form-'+theme, "true");
+                });
+            })()
+
             if ( window.scrollTo ) {
                 window.scrollTo( 0, 0 );
             }
