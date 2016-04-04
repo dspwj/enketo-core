@@ -34,6 +34,7 @@
     },
     "devDependencies": {
         "enketo-transformer": "*",
+        "font-awesome": "^4.4.0",
         "grunt": "0.4.x",
         "grunt-browserify": "5.0.x",
         "grunt-concurrent": "2.x.x",
@@ -59,7 +60,7 @@
     },
     "browser": {
         "text!enketo-config": "./config.json",
-        "widgets": "./src/js/widgets.js",
+        "widgets": "./src/js/widgets-unga.js",
         "translator": "./src/js/fake-translator"
     },
     "dependencies": {
