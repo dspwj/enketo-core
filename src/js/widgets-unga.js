@@ -6,6 +6,7 @@ if ( typeof exports === 'object' && typeof exports.nodeName !== 'string' && type
 
 define( function( require, exports, module ) {
     var widgets = [
+        require( '../widget/select-random/selectrandomizer' ),
         require( '../widget/horizontal-choices/horizontalchoices' ),
         require( '../widget/scroll/scroll' ),
         require( '../widget/select-unga/select-unga' ),
