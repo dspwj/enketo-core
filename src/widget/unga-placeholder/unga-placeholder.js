@@ -39,10 +39,14 @@ define( function( require, exports, module ) {
 
     UngaPlaceholder.prototype.destroy = function( element ) {};
 
+    UngaPlaceholder.prototype.update = function( element ) {
+        this._init();
+    };
+
     $.fn[ pluginName ] = function( options, event ) {
         return this.each( function() {
-            var $this = $( this ),
-                data = $this.data( pluginName );
+            var $this = $( this );
+            var data = $this.data( pluginName );
 
             options = options || {};
 
