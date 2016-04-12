@@ -33,11 +33,15 @@ define( function( require, exports, module ) {
     SelectPickerUngaPlaceholder.prototype._init = function() {
         var $el = $( this.element );
         // set label as placeholder from .question label
-        var $label = $el.siblings( '.question-label' ).text();
+        var $label = $el.siblings( '.question-label.active' ).text();
         $el.find( 'option:first-child' ).html( $label );
     };
 
     SelectPickerUngaPlaceholder.prototype.destroy = function( element ) {};
+
+    SelectPickerUngaPlaceholder.prototype.update = function( element ) {
+        this._init();
+    };
 
     $.fn[ pluginName ] = function( options, event ) {
         return this.each( function() {
