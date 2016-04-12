@@ -31,28 +31,33 @@ define( function( require, exports, module ) {
     SelectPickerUngaCollapse.prototype.constructor = SelectPickerUngaCollapse;
 
     SelectPickerUngaCollapse.prototype._init = function() {
-        var $labelEl = $( this.element ).siblings( '.option-label.active' );
-        var labels = $labelEl.html().split( /\|/ ).map( function( label ) {
-            return label.trim();
-        } );
+        var that = this;
+        var $labelEls = $( this.element ).siblings( '.option-label' );
 
-        this.$collapseButton = $( '<button class="btn-collapse btn-icon-only"><i class="icon"> </i></button>' );
-        this.$collapsible = $( '<span class="sub-option-label collapsible">' + labels[ 1 ] + '</span>' );
+        $labelEls.each( function() {
+            var $labelEl = $( this );
+            var labels = $labelEl.html().split( /\|/ ).map( function( label ) {
+                return label.trim();
+            } );
 
-        $labelEl.html( labels[ 0 ] )
-            .after( this.$collapsible );
+            var $collapseButton = $( '<button class="btn-collapse btn-icon-only"><i class="icon"> </i></button>' );
+            var $collapsible = $( '<span class="sub-option-label collapsible">' + labels[ 1 ] + '</span>' );
 
-        $labelEl.append( this.$collapseButton );
+            $labelEl.html( labels[ 0 ] )
+                .after( $collapsible );
 
-        this._setButtonHandler();
+            $labelEl.append( $collapseButton );
+
+            that._setButtonHandler( $collapseButton );
+        } )
     };
 
     SelectPickerUngaCollapse.prototype._renderLabels = function() {
         // reserved in case translations need to be supported..
     };
 
-    SelectPickerUngaCollapse.prototype._setButtonHandler = function() {
-        this.$collapseButton.on( 'click', function() {
+    SelectPickerUngaCollapse.prototype._setButtonHandler = function( $button ) {
+        $button.on( 'click', function() {
             var $label = $( this ).parent( '.option-label' );
             var open = $label.hasClass( 'open' );
             $label.toggleClass( 'open', !open );
