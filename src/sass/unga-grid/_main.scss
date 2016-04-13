@@ -6,6 +6,10 @@
 
 // override ../grid/main here
 
+.main {
+    max-width: inherit;
+}
+
 .question {
     font-family: 'Oswald', Arial, sans-serif;
     padding-bottom: 60px;
