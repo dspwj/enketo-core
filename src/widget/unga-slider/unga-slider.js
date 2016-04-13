@@ -44,7 +44,6 @@ define( function( require, exports, module ) {
         this.$widget = $( this.element ).next( '.widget' );
         this.$slider = this.$widget.find( '.slider' );
         this._renderSmileys();
-        this._renderValueBubble();
         this._setChangeHandler();
     };
 
@@ -54,20 +53,11 @@ define( function( require, exports, module ) {
         this.$widget.append( '<div class="happy"><i class="fa fa-fw fa-smile-o"></i></div>' );
     };
 
-    UngaSlider.prototype._renderValueBubble = function() {
-        this.$showValue = $( '<div class="show-value">' + this.element.value + '</div>' ).insertBefore( this.element );
-    };
-
-    UngaSlider.prototype._updateCurrentValueShown = function() {
-        this.$showValue.text( this.element.value );
-    };
-
     UngaSlider.prototype._setChangeHandler = function() {
         var that = this;
 
         $( this.element ).on( 'slideStop.' + this.namespace, function( slideEvt ) {
             $( this ).trigger( 'change' );
-            that._updateCurrentValueShown();
         } );
     };
 

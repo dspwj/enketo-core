@@ -52,19 +52,6 @@
             width: 100%;
         }
     }
-    .show-value {
-        position: absolute;
-        right: 14px;
-        top: 18px;
-        background-color: #FFF;
-        padding: 8px;
-        border-radius: 20px;
-        width: 36px;
-        height: 36px;
-        text-align: center;
-        font-size: 23px;
-        box-shadow: 1px 0px 1px 0px #999;
-    }
     .slider-track {
         @include gradient-vertical(#c2c2c2, #cccccc);
     }
